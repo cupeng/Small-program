@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/list/list",
+    "pages/add/add"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f88",
+    "navigationBarTitleText": "我是个纯洁的记事本",
+    "navigationBarTextStyle":"black"
+  }
+}
