@@ -1,15 +1,11 @@
+import postData from '../../data/post.js'
 Page({
-    data: {
-        date:"Sep 18 2016",
-        title: "正式虾肥蟹壮时1"
-    },
-    imgPath: "/images/...",
-    process: function() {
-        var date = "Now 18 2016"
-        var ele = document.getElementById('id')
-    },
+    data: {},
     onLoad: function() {
         //页面初始化
+        this.setData({
+            data:postData
+        })
     },
     onReady: function() {
         //页面渲染完成
@@ -23,5 +19,11 @@ Page({
     },
     onUnload: function() {
         //页面关闭
+    },
+    onPostTap: function(e) {
+        var postId = e.currentTarget.dataset.id
+        wx.navigateTo({
+            url:"post-detail/post-detail?postId=" + postId
+        })
     }
 })

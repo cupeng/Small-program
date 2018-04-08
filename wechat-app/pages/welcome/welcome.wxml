@@ -2,7 +2,7 @@
 <view class="container">
     <image class="user-avatar" src="/images/avatar/1.png"></image>
     <text>Hello,World</text>
-    <view class="moto">
+    <view bindtap="handleTap" class="moto">
         <text class="user-name">开启小程序之旅</text>
     </view>
 </view>

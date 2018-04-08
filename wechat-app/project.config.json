@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
 	"appid": "touristappid",
-	"projectname": "wechat-app",
+	"projectname": "wechat-app1",
 	"condition": {
 		"search": {
 			"current": -1,

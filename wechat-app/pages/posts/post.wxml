@@ -1,3 +1,4 @@
+<import src="post-item/post-item-template.wxml" />
 <view>
     <swiper indicator-dots autoplay>
         <swiper-item>
@@ -10,49 +11,9 @@
             <image src="/images/iqiyi.png">3</image>
         </swiper-item>
     </swiper>
-    <view class="post-container">
-        <view class="post-author-date">
-            <image class="post-author" src="/images/avatar/1.png"></image>
-            <text class="post-date">{{date}}</text>
+    <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
+        <view catchtap="onPostTap" data-id="{{item.postId}}">
+            <template is="postItem" data="{{...item}}" />    
         </view>
-        <text class="post-title">{{title}}</text>
-        <image class="post-image" src="/images/post/crab.png" />
-        <text class="post-content">喀麦隆总统比亚是2018年第一位来华访问的非洲国家元首，也是中国全国两会后到访的首位外国元首。习近平主席对他说：建交47年来，两国始终互相尊重、平等相待，中喀友好深入人心</text>
-        <view class="post-like">
-            <image class="post-like-image" src="/images/icon/chat.png"></image>
-            <text class="post-like-font">92</text>
-            <image class="post-like-image" src="/images/icon/view.png"></image>
-            <text class="post-like-font">65</text>
-        </view>
-    </view>
-    <view class="post-container">
-        <view class="post-author-date">
-            <image class="post-author" src="/images/avatar/1.png"></image>
-            <text class="post-date">Now 25 2016</text>
-        </view>
-        <text class="post-title">正式虾肥蟹壮时</text>
-        <image class="post-image" src="/images/post/crab.png" />
-        <text class="post-content">喀麦隆总统比亚是2018年第一位来华访问的非洲国家元首，也是中国全国两会后到访的首位外国元首。习近平主席对他说：建交47年来，两国始终互相尊重、平等相待，中喀友好深入人心</text>
-        <view class="post-like">
-            <image class="post-like-image" src="/images/icon/chat.png"></image>
-            <text class="post-like-font">92</text>
-            <image class="post-like-image" src="/images/icon/view.png"></image>
-            <text class="post-like-font">65</text>
-        </view>
-    </view>
-    <view class="post-container">
-        <view class="post-author-date">
-            <image class="post-author" src="/images/avatar/1.png"></image>
-            <text class="post-date">Now 25 2016</text>
-        </view>
-        <text class="post-title">正式虾肥蟹壮时</text>
-        <image class="post-image" src="/images/post/crab.png" />
-        <text class="post-content">喀麦隆总统比亚是2018年第一位来华访问的非洲国家元首，也是中国全国两会后到访的首位外国元首。习近平主席对他说：建交47年来，两国始终互相尊重、平等相待，中喀友好深入人心</text>
-        <view class="post-like">
-            <image class="post-like-image" src="/images/icon/chat.png"></image>
-            <text class="post-like-font">92</text>
-            <image class="post-like-image" src="/images/icon/view.png"></image>
-            <text class="post-like-font">65</text>
-        </view>
-    </view>
+    </block>
 </view>
