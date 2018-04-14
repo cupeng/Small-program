@@ -1,6 +1,6 @@
 Page({
     handleTap: (e)=>{
-        wx.navigateTo({
+        wx.switchTab({
             url: '../posts/post'
         })
     }
